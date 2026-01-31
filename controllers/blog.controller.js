@@ -53,6 +53,8 @@ exports.createBlog = async (req, res, next) => {
       slug: slugify(req.body.title, { lower: true }),
       author: req.body.author || "Iyra Media",
       published: req.body.published === "true" || req.body.published === true,
+      Keywords: req.body.Keywords || [],
+      Meta_description: req.body.Meta_description || null,
     });
 
     res.status(201).json({

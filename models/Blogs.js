@@ -24,6 +24,12 @@ const blogSchema = new mongoose.Schema({
     published : {
         type : Boolean,
         default : true
+    },
+    Keywords:[
+        { type: String  }
+    ],
+    Meta_description : {
+        type : String
     }
 }, { timestamps: true });
 
